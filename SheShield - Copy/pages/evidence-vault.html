@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evidence Vault – SheShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/vault.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+        <li><a href="sos-center.html" class="nav-link">SOS Center</a></li>
+        <li><a href="cyber-safety.html" class="nav-link">Cyber Safety</a></li>
+        <li><a href="evidence-vault.html" class="nav-link active">Evidence Vault</a></li>
+        <li><a href="legal-awareness.html" class="nav-link">Legal</a></li>
+        <li><a href="emergency-guide.html" class="nav-link">Emergency</a></li>
+      </ul>
+      <a href="sos-center.html" class="sos-btn"><span>🆘</span> SOS</a>
+      <div class="user-badge" id="userBadge" style="display:none;">
+        <span class="user-avatar" id="userAvatar">?</span>
+        <span class="user-name"></span>
+        <button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+      </div>
+      <a href="login.html" class="login-nav-btn" id="loginNavBtn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="mobile-link">🏠 Dashboard</a>
+      <a href="sos-center.html" class="mobile-link">🆘 SOS Center</a>
+      <a href="cyber-safety.html" class="mobile-link">🔒 Cyber Safety</a>
+      <a href="evidence-vault.html" class="mobile-link active">📁 Evidence Vault</a>
+      <a href="legal-awareness.html" class="mobile-link">⚖️ Legal Awareness</a>
+      <a href="emergency-guide.html" class="mobile-link">🚨 Emergency Guide</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header vault-header">
+      <div class="container">
+        <p class="page-eyebrow">Private. Secure. Yours.</p>
+        <h1 class="page-title">Evidence <span class="logo-accent">Vault</span></h1>
+        <p class="page-sub">Save screenshots and incident notes safely. Strong evidence makes a strong complaint.</p>
+      </div>
+    </section>
+
+    <!-- AUTH GATE (shown when logged out — Evidence Vault requires login) -->
+    <section class="vault-lock-section" id="authGateSection" style="display:none;">
+      <div class="container">
+        <div class="lock-card">
+          <div class="lock-icon">🔒</div>
+          <h2>Login Required</h2>
+          <p>Evidence Vault stores sensitive records tied to your account. Please login to view or save records.</p>
+          <a href="login.html" class="unlock-btn" style="display:block; text-decoration:none;">Login to Continue</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCK SCREEN -->
+    <section class="vault-lock-section" id="lockSection" style="display:none;">
+      <div class="container">
+        <div class="lock-card">
+          <div class="lock-icon">🔐</div>
+          <h2>Vault Locked</h2>
+          <p>Set a 4-digit PIN to protect your evidence records.</p>
+          <input type="password" id="pinInput" class="pin-input" maxlength="4" inputmode="numeric" placeholder="• • • •" />
+          <button class="unlock-btn" id="unlockBtn">Unlock Vault</button>
+          <p class="pin-hint" id="pinHint">First time? Set any 4-digit PIN — you'll use the same PIN next time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VAULT CONTENT (hidden until unlocked) -->
+    <div id="vaultContent" style="display:none;">
+
+      <div class="container" style="padding-top:16px;">
+        <div class="sync-banner offline" id="syncBanner" style="display:none;"></div>
+      </div>
+
+
+      <!-- UPLOAD SECTION -->
+      <section class="upload-section">
+        <div class="container">
+          <h2 class="section-title">Upload Screenshot</h2>
+          <div class="upload-box" id="uploadBox">
+            <input type="file" id="fileInput" accept="image/*" hidden />
+            <div class="upload-inner">
+              <span class="upload-icon">📤</span>
+              <p class="upload-text">Click or drag a screenshot here</p>
+              <p class="upload-sub">PNG, JPG up to 5MB — stored only on this device</p>
+            </div>
+          </div>
+          <div class="preview-row" id="previewRow"></div>
+        </div>
+      </section>
+
+      <!-- INCIDENT NOTES FORM -->
+      <section class="notes-section">
+        <div class="container">
+          <h2 class="section-title">Incident Notes</h2>
+          <div class="notes-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="incidentType">Incident Type</label>
+                <select id="incidentType" class="form-input">
+                  <option value="Blackmail">Blackmail / Threat</option>
+                  <option value="Harassment">Harassment</option>
+                  <option value="Stalking">Stalking</option>
+                  <option value="Scam">Scam / Fraud</option>
+                  <option value="FakeProfile">Fake Profile</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="incidentDate">Date of Incident</label>
+                <input type="date" id="incidentDate" class="form-input" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="incidentPlatform">Platform / Source</label>
+              <input type="text" id="incidentPlatform" class="form-input" placeholder="e.g. Instagram, WhatsApp, In-person" />
+            </div>
+            <div class="form-group">
+              <label for="incidentDesc">Description</label>
+              <textarea id="incidentDesc" class="form-input" rows="4" placeholder="Describe what happened — be as specific as possible (what, when, who, how)"></textarea>
+            </div>
+            <button class="save-record-btn" id="saveRecordBtn">💾 Save Record</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVED RECORDS -->
+      <section class="records-section">
+        <div class="container">
+          <div class="records-header-row">
+            <h2 class="section-title" style="margin-bottom:0;">Saved Records</h2>
+            <button class="export-btn" id="exportBtn">⬇️ Export All</button>
+          </div>
+          <div class="records-list" id="recordsList"></div>
+          <div class="no-records" id="noRecords" style="display:none;">
+            <p>📂 No records saved yet.</p>
+            <p>Upload a screenshot or add an incident note to get started.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <section class="helpline-strip">
+    <div class="container helpline-inner">
+      <span>📞 Women Helpline: <strong>1091</strong></span>
+      <span>🚔 Police: <strong>100</strong></span>
+      <span>💻 Cyber Crime: <strong>1930</strong></span>
+      <span>🆘 Emergency: <strong>112</strong></span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+        <p>Built with care for every woman's safety.</p>
+      </div>
+      <div class="footer-links">
+        <a href="sos-center.html">SOS Center</a>
+        <a href="cyber-safety.html">Cyber Safety</a>
+        <a href="evidence-vault.html">Evidence Vault</a>
+        <a href="legal-awareness.html">Legal</a>
+        <a href="emergency-guide.html">Emergency</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2024 SheShield. Made for safety, built with purpose.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase-config.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/vault.js"></script>
+</body>
+</html>

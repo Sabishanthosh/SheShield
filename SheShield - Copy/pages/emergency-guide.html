@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emergency Guidance – SheShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/emergency.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+        <li><a href="sos-center.html" class="nav-link">SOS Center</a></li>
+        <li><a href="cyber-safety.html" class="nav-link">Cyber Safety</a></li>
+        <li><a href="evidence-vault.html" class="nav-link">Evidence Vault</a></li>
+        <li><a href="legal-awareness.html" class="nav-link">Legal</a></li>
+        <li><a href="emergency-guide.html" class="nav-link active">Emergency</a></li>
+      </ul>
+      <a href="sos-center.html" class="sos-btn"><span>🆘</span> SOS</a>
+      <div class="user-badge" id="userBadge" style="display:none;">
+        <span class="user-avatar" id="userAvatar">?</span>
+        <span class="user-name"></span>
+        <button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+      </div>
+      <a href="login.html" class="login-nav-btn" id="loginNavBtn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="mobile-link">🏠 Dashboard</a>
+      <a href="sos-center.html" class="mobile-link">🆘 SOS Center</a>
+      <a href="cyber-safety.html" class="mobile-link">🔒 Cyber Safety</a>
+      <a href="evidence-vault.html" class="mobile-link">📁 Evidence Vault</a>
+      <a href="legal-awareness.html" class="mobile-link">⚖️ Legal Awareness</a>
+      <a href="emergency-guide.html" class="mobile-link active">🚨 Emergency Guide</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header emergency-header">
+      <div class="container">
+        <p class="page-eyebrow">Tell us what's happening</p>
+        <h1 class="page-title">Emergency <span class="logo-accent">Guidance</span></h1>
+        <p class="page-sub">Select your situation below and get clear, step-by-step guidance immediately.</p>
+      </div>
+    </section>
+
+    <!-- SITUATION SELECTOR -->
+    <section class="selector-section">
+      <div class="container">
+        <div class="situation-grid" id="situationGrid">
+          <button class="situation-card" data-situation="stalking">
+            <span class="sit-icon">👁️</span>
+            <h3>Stalking</h3>
+            <p>Someone is following or monitoring me</p>
+          </button>
+          <button class="situation-card" data-situation="harassment">
+            <span class="sit-icon">😠</span>
+            <h3>Harassment</h3>
+            <p>Unwanted contact, comments, or behavior</p>
+          </button>
+          <button class="situation-card" data-situation="blackmail">
+            <span class="sit-icon">📸</span>
+            <h3>Blackmail</h3>
+            <p>Being threatened over photos/videos/info</p>
+          </button>
+          <button class="situation-card" data-situation="unsafetravel">
+            <span class="sit-icon">🚖</span>
+            <h3>Unsafe Travel</h3>
+            <p>Feeling unsafe in a cab, bus, or while walking</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIDANCE RESULT (hidden initially) -->
+    <section class="guidance-section" id="guidanceSection" style="display:none;">
+      <div class="container">
+        <div class="guidance-card">
+          <button class="back-btn" id="backBtn">← Choose different situation</button>
+
+          <div class="guidance-head">
+            <span class="guidance-icon" id="guidanceIcon">👁️</span>
+            <h2 id="guidanceTitle">Stalking</h2>
+          </div>
+
+          <div class="immediate-box" id="immediateBox">
+            <span class="immediate-tag">⚡ DO THIS RIGHT NOW</span>
+            <p id="immediateText"></p>
+          </div>
+
+          <h3>Step-by-Step Guidance</h3>
+          <ol class="guidance-steps" id="guidanceSteps"></ol>
+
+          <div class="guidance-actions">
+            <a href="sos-center.html" class="cyber-action-btn primary">🆘 Open SOS Center</a>
+            <a href="evidence-vault.html" class="cyber-action-btn secondary">📁 Save Evidence</a>
+            <a href="legal-awareness.html" class="cyber-action-btn secondary">⚖️ Know Your Rights</a>
+          </div>
+
+          <div class="helpline-mini">
+            <a href="tel:1091">📞 Women Helpline: 1091</a>
+            <a href="tel:100">🚔 Police: 100</a>
+            <a href="tel:112">🆘 Emergency: 112</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="helpline-strip">
+    <div class="container helpline-inner">
+      <span>📞 Women Helpline: <strong>1091</strong></span>
+      <span>🚔 Police: <strong>100</strong></span>
+      <span>💻 Cyber Crime: <strong>1930</strong></span>
+      <span>🆘 Emergency: <strong>112</strong></span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+        <p>Built with care for every woman's safety.</p>
+      </div>
+      <div class="footer-links">
+        <a href="sos-center.html">SOS Center</a>
+        <a href="cyber-safety.html">Cyber Safety</a>
+        <a href="evidence-vault.html">Evidence Vault</a>
+        <a href="legal-awareness.html">Legal</a>
+        <a href="emergency-guide.html">Emergency</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2024 SheShield. Made for safety, built with purpose.</p>
+  </footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase-config.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/emergency.js"></script>
+</body>
+</html>

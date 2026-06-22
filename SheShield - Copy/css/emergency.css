@@ -1,0 +1,185 @@
+/* =============================================
+   SHESHIELD – Emergency Guidance Styles
+   ============================================= */
+
+.emergency-header { background: linear-gradient(180deg, #FFF0EE 0%, var(--bg) 100%); }
+
+/* ---- SITUATION SELECTOR ---- */
+.selector-section { padding: 16px 0 72px; }
+.situation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.situation-card {
+  background: var(--white);
+  border: 2px solid var(--rose-pale);
+  border-radius: var(--radius);
+  padding: 32px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+}
+.situation-card:hover {
+  border-color: var(--rose-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  background: #FFF8F4;
+}
+.sit-icon { font-size: 2.6rem; }
+.situation-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+.situation-card p {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+/* ---- GUIDANCE RESULT ---- */
+.guidance-section { padding: 0 0 72px; }
+.guidance-card {
+  background: var(--white);
+  border: 1px solid var(--rose-pale);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--rose-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.back-btn:hover { color: var(--rose-deep); }
+
+.guidance-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.guidance-icon {
+  font-size: 2.4rem;
+  background: var(--rose-pale);
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.guidance-head h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--text-dark);
+}
+
+.immediate-box {
+  background: #FFF0F0;
+  border: 1.5px solid #FFB8B8;
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+.immediate-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--danger);
+  margin-bottom: 6px;
+}
+.immediate-box p {
+  font-size: 0.92rem;
+  color: #8a2e2e;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.guidance-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  padding-left: 12px;
+  border-left: 3px solid var(--rose-gold);
+}
+
+.guidance-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin-bottom: 28px;
+}
+.guidance-steps li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  background: var(--bg);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+}
+.guidance-steps .step-num {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--rose-gold);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.guidance-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.helpline-mini {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--rose-pale);
+}
+.helpline-mini a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  transition: color var(--transition);
+}
+.helpline-mini a:hover { color: var(--rose-gold); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .situation-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .situation-grid { grid-template-columns: 1fr; }
+  .guidance-card { padding: 24px 20px; }
+  .guidance-head h2 { font-size: 1.3rem; }
+  .guidance-icon { width: 52px; height: 52px; font-size: 1.9rem; }
+}

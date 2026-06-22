@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal Awareness – SheShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/legal.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+        <li><a href="sos-center.html" class="nav-link">SOS Center</a></li>
+        <li><a href="cyber-safety.html" class="nav-link">Cyber Safety</a></li>
+        <li><a href="evidence-vault.html" class="nav-link">Evidence Vault</a></li>
+        <li><a href="legal-awareness.html" class="nav-link active">Legal</a></li>
+        <li><a href="emergency-guide.html" class="nav-link">Emergency</a></li>
+      </ul>
+      <a href="sos-center.html" class="sos-btn"><span>🆘</span> SOS</a>
+      <div class="user-badge" id="userBadge" style="display:none;">
+        <span class="user-avatar" id="userAvatar">?</span>
+        <span class="user-name"></span>
+        <button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+      </div>
+      <a href="login.html" class="login-nav-btn" id="loginNavBtn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="mobile-link">🏠 Dashboard</a>
+      <a href="sos-center.html" class="mobile-link">🆘 SOS Center</a>
+      <a href="cyber-safety.html" class="mobile-link">🔒 Cyber Safety</a>
+      <a href="evidence-vault.html" class="mobile-link">📁 Evidence Vault</a>
+      <a href="legal-awareness.html" class="mobile-link active">⚖️ Legal Awareness</a>
+      <a href="emergency-guide.html" class="mobile-link">🚨 Emergency Guide</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header legal-header">
+      <div class="container">
+        <p class="page-eyebrow">Know your power</p>
+        <h1 class="page-title">Legal <span class="logo-accent">Awareness</span></h1>
+        <p class="page-sub">Understand your rights, the laws that protect you, and how the complaint process works.</p>
+      </div>
+    </section>
+
+    <!-- YOUR RIGHTS -->
+    <section class="rights-section">
+      <div class="container">
+        <h2 class="section-title">Your Rights</h2>
+        <div class="rights-grid">
+          <div class="right-card">
+            <span class="right-icon">🆓</span>
+            <h3>Free Legal Aid</h3>
+            <p>Every woman has the right to free legal assistance under the Legal Services Authorities Act, 1987 — regardless of income.</p>
+          </div>
+          <div class="right-card">
+            <span class="right-icon">🔒</span>
+            <h3>Privacy Protection</h3>
+            <p>Your identity in sexual harassment / assault cases is legally protected — media and police cannot reveal your name (Sec 354C, IPC).</p>
+          </div>
+          <div class="right-card">
+            <span class="right-icon">🌙</span>
+            <h3>Zero FIR</h3>
+            <p>You can file an FIR at <strong>any police station</strong>, regardless of where the crime occurred. It gets transferred to the right jurisdiction.</p>
+          </div>
+          <div class="right-card">
+            <span class="right-icon">👮‍♀️</span>
+            <h3>Women Officer Right</h3>
+            <p>You have the right to request a woman police officer to record your statement, especially in sensitive cases.</p>
+          </div>
+          <div class="right-card">
+            <span class="right-icon">🏠</span>
+            <h3>Statement at Home</h3>
+            <p>In certain cases, you can request your statement be recorded at your home or a place of your choice, not the police station.</p>
+          </div>
+          <div class="right-card">
+            <span class="right-icon">⏰</span>
+            <h3>No Night Arrest</h3>
+            <p>Women generally cannot be arrested after sunset or before sunrise, except in exceptional circumstances with magistrate permission.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY LAWS -->
+    <section class="laws-section">
+      <div class="container">
+        <h2 class="section-title">Key Laws That Protect You</h2>
+        <div class="laws-accordion" id="lawsAccordion">
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">Sec 354A</span>
+              <span class="law-name">Sexual Harassment</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Covers unwelcome physical contact, sexual advances, demand for sexual favors, showing pornography, or making sexually colored remarks. Punishment: up to 3 years imprisonment + fine.</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">Sec 354C</span>
+              <span class="law-name">Voyeurism</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Watching, capturing, or sharing images of a woman in a private act without consent. Punishment: 1-3 years (first offense), 3-7 years (repeat offense).</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">Sec 354D</span>
+              <span class="law-name">Stalking</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Following, contacting, or monitoring a woman despite clear disinterest (online or offline). Punishment: up to 3 years (first offense), up to 5 years (repeat offense).</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">Sec 66E (IT Act)</span>
+              <span class="law-name">Privacy Violation</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Capturing, publishing, or transmitting images of a person's private area without consent. Punishment: up to 3 years + ₹2 lakh fine.</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">Sec 66C (IT Act)</span>
+              <span class="law-name">Identity Theft</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Fraudulent use of another person's identity (fake profiles, password, signature). Punishment: up to 3 years + ₹1 lakh fine.</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">Sec 67 (IT Act)</span>
+              <span class="law-name">Obscene Content</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Publishing or transmitting obscene material electronically, including blackmail using private photos/videos. Punishment: up to 5 years + ₹10 lakh fine (repeat offense).</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">DV Act, 2005</span>
+              <span class="law-name">Domestic Violence</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Protects women from physical, emotional, sexual, and economic abuse by family members. Provides protection orders, residence rights, and monetary relief.</p>
+            </div>
+          </div>
+
+          <div class="law-item">
+            <button class="law-header">
+              <span class="law-section-tag">PoSH Act, 2013</span>
+              <span class="law-name">Workplace Harassment</span>
+              <span class="law-toggle">+</span>
+            </button>
+            <div class="law-body">
+              <p>Mandates Internal Complaints Committee (ICC) in every workplace with 10+ employees to handle sexual harassment complaints confidentially.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLAINT PROCESS -->
+    <section class="process-section">
+      <div class="container">
+        <h2 class="section-title">Complaint Process</h2>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="process-num">1</div>
+            <div class="process-content">
+              <h4>Document Everything</h4>
+              <p>Save screenshots, messages, photos, witness names. Use Evidence Vault to organize records with dates.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">2</div>
+            <div class="process-content">
+              <h4>File the Complaint</h4>
+              <p>Visit any police station (Zero FIR) or file online at cybercrime.gov.in for cyber-related cases. No fee required.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">3</div>
+            <div class="process-content">
+              <h4>Get Acknowledgment</h4>
+              <p>Insist on a written acknowledgment / FIR copy with the complaint number. This is your right — don't leave without it.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">4</div>
+            <div class="process-content">
+              <h4>Investigation</h4>
+              <p>Police investigate, may call you for statement. You can request a woman officer for sensitive cases.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">5</div>
+            <div class="process-content">
+              <h4>Legal Support</h4>
+              <p>Contact District Legal Services Authority (DLSA) for free lawyer support if needed.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">6</div>
+            <div class="process-content">
+              <h4>Follow Up</h4>
+              <p>Track your complaint status using the complaint number. Follow up if no action within reasonable time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HELPLINE DIRECTORY -->
+    <section class="helpline-directory">
+      <div class="container">
+        <h2 class="section-title">Helpline Information</h2>
+        <div class="helpline-grid">
+          <div class="helpline-card">
+            <span class="hl-icon">🆘</span>
+            <div class="hl-info">
+              <span class="hl-number">112</span>
+              <span class="hl-label">National Emergency Number</span>
+            </div>
+            <a href="tel:112" class="hl-call">Call</a>
+          </div>
+          <div class="helpline-card">
+            <span class="hl-icon">👩</span>
+            <div class="hl-info">
+              <span class="hl-number">1091</span>
+              <span class="hl-label">Women Helpline (24/7)</span>
+            </div>
+            <a href="tel:1091" class="hl-call">Call</a>
+          </div>
+          <div class="helpline-card">
+            <span class="hl-icon">🚔</span>
+            <div class="hl-info">
+              <span class="hl-number">100</span>
+              <span class="hl-label">Police</span>
+            </div>
+            <a href="tel:100" class="hl-call">Call</a>
+          </div>
+          <div class="helpline-card">
+            <span class="hl-icon">💻</span>
+            <div class="hl-info">
+              <span class="hl-number">1930</span>
+              <span class="hl-label">Cyber Crime Helpline</span>
+            </div>
+            <a href="tel:1930" class="hl-call">Call</a>
+          </div>
+          <div class="helpline-card">
+            <span class="hl-icon">⚖️</span>
+            <div class="hl-info">
+              <span class="hl-number">15100</span>
+              <span class="hl-label">NALSA Legal Aid Helpline</span>
+            </div>
+            <a href="tel:15100" class="hl-call">Call</a>
+          </div>
+          <div class="helpline-card">
+            <span class="hl-icon">🧒</span>
+            <div class="hl-info">
+              <span class="hl-number">1098</span>
+              <span class="hl-label">Child Helpline</span>
+            </div>
+            <a href="tel:1098" class="hl-call">Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="helpline-strip">
+    <div class="container helpline-inner">
+      <span>📞 Women Helpline: <strong>1091</strong></span>
+      <span>🚔 Police: <strong>100</strong></span>
+      <span>💻 Cyber Crime: <strong>1930</strong></span>
+      <span>🆘 Emergency: <strong>112</strong></span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+        <p>Built with care for every woman's safety.</p>
+      </div>
+      <div class="footer-links">
+        <a href="sos-center.html">SOS Center</a>
+        <a href="cyber-safety.html">Cyber Safety</a>
+        <a href="evidence-vault.html">Evidence Vault</a>
+        <a href="legal-awareness.html">Legal</a>
+        <a href="emergency-guide.html">Emergency</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2024 SheShield. Made for safety, built with purpose.</p>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase-config.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/legal.js"></script>
+</body>
+</html>

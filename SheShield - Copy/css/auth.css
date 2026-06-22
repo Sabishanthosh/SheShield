@@ -1,0 +1,218 @@
+/* =============================================
+   SHESHIELD – Auth (Login/Signup) Styles
+   ============================================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #FFF4EF 0%, var(--bg) 60%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border: 1px solid var(--rose-pale);
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.auth-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.auth-sub {
+  font-size: 0.86rem;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.auth-msg {
+  font-size: 0.82rem;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  text-align: left;
+}
+.auth-msg.error { background: #FFF0F0; color: var(--danger); border: 1px solid #FFCDD2; }
+.auth-msg.success { background: #F0FFF7; color: var(--success); border: 1px solid #B2DFCC; }
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1.5px solid var(--rose-pale);
+  padding: 13px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.google-btn:hover { border-color: var(--rose-gold); background: #FFFAF8; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: var(--text-light);
+  font-size: 0.78rem;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rose-pale);
+}
+.auth-divider span { padding: 0 12px; }
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.auth-form .form-input { width: 100%; }
+
+.auth-submit-btn {
+  background: var(--rose-gold);
+  color: var(--white);
+  border: none;
+  padding: 13px;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 4px 14px rgba(201,149,108,0.35);
+}
+.auth-submit-btn:hover { background: var(--rose-deep); }
+.auth-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+}
+.auth-switch button {
+  background: none;
+  border: none;
+  color: var(--rose-gold);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.auth-switch button:hover { color: var(--rose-deep); }
+
+.auth-skip {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+.auth-skip:hover { color: var(--rose-gold); }
+
+/* ---- Navbar user badge (used on all pages) ---- */
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rose-pale);
+  padding: 6px 14px 6px 6px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+.user-avatar {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--rose-gold);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rose-deep);
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.logout-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.logout-btn:hover { color: var(--danger); }
+
+.login-nav-btn {
+  background: var(--white);
+  color: var(--rose-gold);
+  border: 1.5px solid var(--rose-light);
+  padding: 7px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.login-nav-btn:hover { background: var(--rose-pale); }
+
+/* ---- Sync status banner (used on SOS/Vault pages) ---- */
+.sync-banner {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.sync-banner.synced { background: #F0FFF7; color: var(--success); border: 1px solid #B2DFCC; }
+.sync-banner.offline { background: #FFF8EC; color: #946200; border: 1px solid #FADDAA; }
+.sync-banner a { font-weight: 700; text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .login-nav-btn { padding: 6px 14px; font-size: 0.8rem; }
+  .user-badge { padding: 5px 10px 5px 5px; gap: 6px; }
+  .user-avatar { width: 22px; height: 22px; font-size: 0.68rem; }
+}
+
+@media (max-width: 600px) {
+  .auth-card { padding: 32px 24px; }
+  .user-name { display: none; }
+}

@@ -1,0 +1,277 @@
+/* =============================================
+   SHESHIELD – Cyber Safety Hub Styles
+   ============================================= */
+
+.cyber-header { background: linear-gradient(180deg, #EEF4FF 0%, var(--bg) 100%); }
+
+/* ---- TABS ---- */
+.threats-section { padding: 16px 0 64px; }
+
+.threat-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--rose-pale);
+  padding-bottom: 0;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition);
+  border-radius: 8px 8px 0 0;
+}
+.tab-btn:hover { color: var(--rose-gold); background: var(--rose-pale); }
+.tab-btn.active {
+  color: var(--rose-gold);
+  border-bottom-color: var(--rose-gold);
+  background: #FFF4EF;
+}
+
+/* ---- TAB CONTENT ---- */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.threat-card {
+  background: var(--white);
+  border: 1px solid var(--rose-pale);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.threat-icon-wrap {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--rose-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.threat-big-icon { font-size: 2.4rem; }
+
+.threat-body { flex: 1; }
+.threat-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.threat-desc {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.threat-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 20px 0 12px;
+  padding-left: 12px;
+  border-left: 3px solid var(--rose-gold);
+}
+
+/* Warning box */
+.warning-box {
+  display: flex;
+  gap: 12px;
+  background: #FFF8EC;
+  border: 1px solid #FADDAA;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: #7A5C00;
+  line-height: 1.6;
+}
+.warning-box span { font-size: 1.2rem; flex-shrink: 0; }
+
+/* Threat list */
+.threat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.threat-list li {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+}
+
+/* Steps list */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 4px;
+  list-style: none;
+}
+.steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--rose-gold);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+/* Action links */
+.action-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.cyber-action-btn {
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.cyber-action-btn.primary {
+  background: var(--rose-gold);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(201,149,108,0.35);
+}
+.cyber-action-btn.primary:hover {
+  background: var(--rose-deep);
+  transform: translateY(-1px);
+}
+.cyber-action-btn.secondary {
+  background: var(--white);
+  color: var(--rose-gold);
+  border: 2px solid var(--rose-light);
+}
+.cyber-action-btn.secondary:hover {
+  background: var(--rose-pale);
+  border-color: var(--rose-gold);
+}
+
+/* Platform grid */
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 4px;
+}
+.platform-card {
+  background: var(--bg);
+  border: 1px solid var(--rose-pale);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.platform-icon { font-size: 1.5rem; }
+.platform-card strong { font-size: 0.9rem; color: var(--text-dark); }
+.platform-card p { font-size: 0.8rem; color: var(--text-mid); line-height: 1.5; }
+
+/* Report methods */
+.report-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.report-method {
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid transparent;
+}
+.report-method.online  { background: #F0F6FF; border-color: #C5DCFA; }
+.report-method.phone   { background: #FFF4F8; border-color: var(--rose-pale); }
+.report-method.station { background: #F0FFF7; border-color: #B2DFCC; }
+.method-icon { font-size: 1.8rem; }
+.report-method h4 { font-size: 0.92rem; font-weight: 700; color: var(--text-dark); }
+.report-method p  { font-size: 0.8rem; color: var(--text-mid); line-height: 1.5; }
+.method-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rose-gold);
+  margin-top: 4px;
+  transition: color var(--transition);
+}
+.method-link:hover { color: var(--rose-deep); }
+
+/* ---- SAFETY TIPS ---- */
+.safety-tips-section {
+  padding: 64px 0;
+  background: var(--white);
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.tip-card {
+  background: var(--bg);
+  border: 1px solid var(--rose-pale);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all var(--transition);
+}
+.tip-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--rose-light);
+}
+.tip-icon { font-size: 1.8rem; }
+.tip-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); }
+.tip-card p  { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .threat-card { flex-direction: column; gap: 20px; padding: 24px 20px; }
+  .threat-icon-wrap { width: 60px; height: 60px; }
+  .threat-big-icon { font-size: 1.8rem; }
+  .report-methods { grid-template-columns: 1fr; }
+  .platform-grid  { grid-template-columns: 1fr; }
+  .tips-grid      { grid-template-columns: repeat(2, 1fr); }
+  .tab-btn        { font-size: 0.78rem; padding: 10px 12px; }
+}
+@media (max-width: 480px) {
+  .tips-grid { grid-template-columns: 1fr; }
+  .threat-body h2 { font-size: 1.4rem; }
+}

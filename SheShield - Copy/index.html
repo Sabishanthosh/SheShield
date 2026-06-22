@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SheShield – Women's Safety & Cyber Protection</title>
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="pages/sos-center.html" class="nav-link">SOS Center</a></li>
+        <li><a href="pages/cyber-safety.html" class="nav-link">Cyber Safety</a></li>
+        <li><a href="pages/evidence-vault.html" class="nav-link">Evidence Vault</a></li>
+        <li><a href="pages/legal-awareness.html" class="nav-link">Legal</a></li>
+        <li><a href="pages/emergency-guide.html" class="nav-link">Emergency</a></li>
+      </ul>
+
+      <!-- SOS Button -->
+      <a href="pages/sos-center.html" class="sos-btn">
+        <span>🆘</span> SOS
+      </a>
+
+      <!-- User Badge (shown when logged in) -->
+      <div class="user-badge" id="userBadge" style="display:none;">
+        <span class="user-avatar" id="userAvatar">?</span>
+        <span class="user-name"></span>
+        <button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+      </div>
+
+      <!-- Login Button (shown when logged out) -->
+      <a href="pages/login.html" class="login-nav-btn" id="loginNavBtn">Login</a>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+        <span class="theme-icon-light">☀️</span>
+        <span class="theme-icon-dark">🌙</span>
+      </button>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="mobile-link active">🏠 Dashboard</a>
+      <a href="pages/sos-center.html" class="mobile-link">🆘 SOS Center</a>
+      <a href="pages/cyber-safety.html" class="mobile-link">🔒 Cyber Safety</a>
+      <a href="pages/evidence-vault.html" class="mobile-link">📁 Evidence Vault</a>
+      <a href="pages/legal-awareness.html" class="mobile-link">⚖️ Legal Awareness</a>
+      <a href="pages/emergency-guide.html" class="mobile-link">🚨 Emergency Guide</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Your safety, your rights, your voice</p>
+      <h1 class="hero-title">You are <span class="highlight">protected.</span></h1>
+      <p class="hero-sub">SheShield combines physical safety, cyber protection, evidence preservation, and legal guidance — all in one place.</p>
+      <div class="hero-actions">
+        <a href="pages/sos-center.html" class="btn-primary">🆘 Open SOS Center</a>
+        <a href="pages/emergency-guide.html" class="btn-secondary">Get Emergency Help</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="shield-ring">
+        <div class="shield-core">🛡️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY SCORE -->
+  <section class="safety-score-section">
+    <div class="container">
+      <div class="score-card">
+        <div class="score-left">
+          <p class="score-label">Your Safety Score</p>
+          <div class="score-circle">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" class="circle-bg"/>
+              <circle cx="60" cy="60" r="50" class="circle-fill" id="scoreCircle"/>
+            </svg>
+            <span class="score-number" id="scoreNumber">72</span>
+          </div>
+        </div>
+        <div class="score-right">
+          <h3>Improve your score</h3>
+          <ul class="score-tips">
+            <li class="tip done">✅ Emergency contacts added</li>
+            <li class="tip done">✅ Location access enabled</li>
+            <li class="tip pending">⚠️ Add trusted contact backup</li>
+            <li class="tip pending">⚠️ Complete Cyber Safety Quiz</li>
+            <li class="tip pending">⚠️ Save evidence vault PIN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACTIONS -->
+  <section class="quick-actions">
+    <div class="container">
+      <h2 class="section-title">Quick Actions</h2>
+      <div class="actions-grid">
+
+        <a href="pages/sos-center.html" class="action-card sos">
+          <div class="action-icon">🆘</div>
+          <h3>SOS Alert</h3>
+          <p>Trigger emergency countdown & alert contacts</p>
+        </a>
+
+        <a href="pages/cyber-safety.html" class="action-card cyber">
+          <div class="action-icon">🔒</div>
+          <h3>Cyber Safety</h3>
+          <p>Report blackmail, scams & fake profiles</p>
+        </a>
+
+        <a href="pages/evidence-vault.html" class="action-card vault">
+          <div class="action-icon">📁</div>
+          <h3>Evidence Vault</h3>
+          <p>Securely store screenshots & incident records</p>
+        </a>
+
+        <a href="pages/legal-awareness.html" class="action-card legal">
+          <div class="action-icon">⚖️</div>
+          <h3>Know Your Rights</h3>
+          <p>Laws, complaint process & helplines</p>
+        </a>
+
+        <a href="pages/emergency-guide.html" class="action-card emergency">
+          <div class="action-icon">🚨</div>
+          <h3>Emergency Guide</h3>
+          <p>Step-by-step help for stalking, harassment & more</p>
+        </a>
+
+        <a href="pages/cyber-safety.html#learn" class="action-card learn">
+          <div class="action-icon">📚</div>
+          <h3>Safety Learning</h3>
+          <p>Self-defense tips, travel safety & online safety</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT ALERTS -->
+  <section class="recent-alerts">
+    <div class="container">
+      <h2 class="section-title">Recent Alerts</h2>
+      <div class="alerts-list" id="alertsList">
+        <div class="alert-item info">
+          <span class="alert-dot"></span>
+          <div class="alert-body">
+            <p class="alert-msg">New cyber threat: Fake job offer scams rising in Tamil Nadu</p>
+            <span class="alert-time">2 hours ago</span>
+          </div>
+        </div>
+        <div class="alert-item warning">
+          <span class="alert-dot"></span>
+          <div class="alert-body">
+            <p class="alert-msg">Reminder: Verify your emergency contacts are up to date</p>
+            <span class="alert-time">Yesterday</span>
+          </div>
+        </div>
+        <div class="alert-item success">
+          <span class="alert-dot"></span>
+          <div class="alert-body">
+            <p class="alert-msg">Evidence vault backup completed successfully</p>
+            <span class="alert-time">2 days ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELPLINE STRIP -->
+  <section class="helpline-strip">
+    <div class="container helpline-inner">
+      <span>📞 Women Helpline: <strong>1091</strong></span>
+      <span>🚔 Police: <strong>100</strong></span>
+      <span>💻 Cyber Crime: <strong>1930</strong></span>
+      <span>🆘 Emergency: <strong>112</strong></span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+        <p>Built with care for every woman's safety.</p>
+      </div>
+      <div class="footer-links">
+        <a href="pages/sos-center.html">SOS Center</a>
+        <a href="pages/cyber-safety.html">Cyber Safety</a>
+        <a href="pages/evidence-vault.html">Evidence Vault</a>
+        <a href="pages/legal-awareness.html">Legal</a>
+        <a href="pages/emergency-guide.html">Emergency</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2024 SheShield. Made for safety, built with purpose.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

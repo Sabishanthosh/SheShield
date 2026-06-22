@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOS Center – SheShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/sos.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+        <li><a href="sos-center.html" class="nav-link active">SOS Center</a></li>
+        <li><a href="cyber-safety.html" class="nav-link">Cyber Safety</a></li>
+        <li><a href="evidence-vault.html" class="nav-link">Evidence Vault</a></li>
+        <li><a href="legal-awareness.html" class="nav-link">Legal</a></li>
+        <li><a href="emergency-guide.html" class="nav-link">Emergency</a></li>
+      </ul>
+      <a href="sos-center.html" class="sos-btn"><span>🆘</span> SOS</a>
+      <div class="user-badge" id="userBadge" style="display:none;">
+        <span class="user-avatar" id="userAvatar">?</span>
+        <span class="user-name"></span>
+        <button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+      </div>
+      <a href="login.html" class="login-nav-btn" id="loginNavBtn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="mobile-link">🏠 Dashboard</a>
+      <a href="sos-center.html" class="mobile-link active">🆘 SOS Center</a>
+      <a href="cyber-safety.html" class="mobile-link">🔒 Cyber Safety</a>
+      <a href="evidence-vault.html" class="mobile-link">📁 Evidence Vault</a>
+      <a href="legal-awareness.html" class="mobile-link">⚖️ Legal Awareness</a>
+      <a href="emergency-guide.html" class="mobile-link">🚨 Emergency Guide</a>
+    </div>
+  </nav>
+
+  <main class="sos-main">
+
+    <!-- PAGE HEADER -->
+    <section class="page-header sos-header">
+      <div class="container">
+        <p class="page-eyebrow">Stay prepared. Stay safe.</p>
+        <h1 class="page-title">SOS <span class="logo-accent">Center</span></h1>
+        <p class="page-sub">One tap to alert your trusted contacts. Your safety network, always ready.</p>
+      </div>
+    </section>
+
+    <!-- SOS COUNTDOWN TRIGGER -->
+    <section class="sos-trigger-section">
+      <div class="container">
+        <div class="sos-trigger-card">
+
+          <div class="sos-status" id="sosStatus">
+            <span class="status-dot idle"></span>
+            <span id="statusText">Ready</span>
+          </div>
+
+          <div class="sos-circle-wrap">
+            <div class="sos-outer-ring" id="sosRing">
+              <button class="sos-big-btn" id="sosTriggerBtn" aria-label="Trigger SOS alert">
+                <span class="sos-btn-icon">🆘</span>
+                <span class="sos-btn-label">HOLD FOR SOS</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Countdown display -->
+          <div class="countdown-display" id="countdownDisplay" style="display:none;">
+            <div class="countdown-number" id="countdownNum">10</div>
+            <p class="countdown-msg">Alerting your contacts in...</p>
+            <button class="cancel-btn" id="cancelBtn">✕ Cancel</button>
+          </div>
+
+          <!-- Sent confirmation -->
+          <div class="alert-sent" id="alertSent" style="display:none;">
+            <div class="sent-icon">✅</div>
+            <h3>Alert Sent!</h3>
+            <p>Your emergency contacts have been notified with your location.</p>
+            <button class="reset-btn" id="resetBtn">Reset SOS</button>
+          </div>
+
+          <p class="sos-hint">Tap the SOS button to start the countdown</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK CALL BUTTONS -->
+    <section class="quick-call-section">
+      <div class="container">
+        <h2 class="section-title">Quick Help</h2>
+        <div class="quick-call-grid">
+          <a href="tel:112" class="call-card emergency-call">
+            <div class="call-icon">🚨</div>
+            <div class="call-info">
+              <span class="call-number">112</span>
+              <span class="call-label">National Emergency</span>
+            </div>
+            <span class="call-arrow">→</span>
+          </a>
+          <a href="tel:1091" class="call-card women-call">
+            <div class="call-icon">👩</div>
+            <div class="call-info">
+              <span class="call-number">1091</span>
+              <span class="call-label">Women Helpline</span>
+            </div>
+            <span class="call-arrow">→</span>
+          </a>
+          <a href="tel:100" class="call-card police-call">
+            <div class="call-icon">🚔</div>
+            <div class="call-info">
+              <span class="call-number">100</span>
+              <span class="call-label">Police</span>
+            </div>
+            <span class="call-arrow">→</span>
+          </a>
+          <a href="tel:1930" class="call-card cyber-call">
+            <div class="call-icon">💻</div>
+            <div class="call-info">
+              <span class="call-number">1930</span>
+              <span class="call-label">Cyber Crime</span>
+            </div>
+            <span class="call-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMERGENCY CONTACTS -->
+    <section class="contacts-section">
+      <div class="container">
+        <div class="sync-banner offline" id="syncBanner" style="display:none;"></div>
+        <div class="contacts-header-row">
+          <h2 class="section-title" style="margin-bottom:0;">Emergency Contacts</h2>
+          <button class="add-contact-btn" id="addContactBtn">+ Add Contact</button>
+        </div>
+
+        <!-- Add Contact Form -->
+        <div class="add-contact-form" id="addContactForm" style="display:none;">
+          <input type="text" id="contactName" placeholder="Contact Name" class="form-input" maxlength="30"/>
+          <input type="tel" id="contactPhone" placeholder="Phone Number" class="form-input" maxlength="15"/>
+          <input type="text" id="contactRelation" placeholder="Relation (e.g. Mom, Friend)" class="form-input" maxlength="20"/>
+          <div class="form-actions">
+            <button class="save-contact-btn" id="saveContactBtn">Save Contact</button>
+            <button class="cancel-form-btn" id="cancelFormBtn">Cancel</button>
+          </div>
+        </div>
+
+        <!-- Contacts List -->
+        <div class="contacts-list" id="contactsList">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div class="no-contacts" id="noContacts" style="display:none;">
+          <p>🤍 No emergency contacts added yet.</p>
+          <p>Add trusted people who will be alerted during SOS.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION SHARE -->
+    <section class="location-section">
+      <div class="container">
+        <div class="location-card">
+          <div class="location-info">
+            <h3>📍 Live Location Sharing</h3>
+            <p>Share your current location with trusted contacts instantly.</p>
+            <p class="location-status" id="locationStatus">Location not fetched yet</p>
+          </div>
+          <button class="location-btn" id="getLocationBtn">Get My Location</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- HELPLINE STRIP -->
+  <section class="helpline-strip">
+    <div class="container helpline-inner">
+      <span>📞 Women Helpline: <strong>1091</strong></span>
+      <span>🚔 Police: <strong>100</strong></span>
+      <span>💻 Cyber Crime: <strong>1930</strong></span>
+      <span>🆘 Emergency: <strong>112</strong></span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+        <p>Built with care for every woman's safety.</p>
+      </div>
+      <div class="footer-links">
+        <a href="sos-center.html">SOS Center</a>
+        <a href="cyber-safety.html">Cyber Safety</a>
+        <a href="evidence-vault.html">Evidence Vault</a>
+        <a href="legal-awareness.html">Legal</a>
+        <a href="emergency-guide.html">Emergency</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2024 SheShield. Made for safety, built with purpose.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase-config.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/sos.js"></script>
+</body>
+</html>

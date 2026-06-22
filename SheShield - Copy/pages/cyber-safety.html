@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Safety Hub – SheShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cyber.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+        <li><a href="sos-center.html" class="nav-link">SOS Center</a></li>
+        <li><a href="cyber-safety.html" class="nav-link active">Cyber Safety</a></li>
+        <li><a href="evidence-vault.html" class="nav-link">Evidence Vault</a></li>
+        <li><a href="legal-awareness.html" class="nav-link">Legal</a></li>
+        <li><a href="emergency-guide.html" class="nav-link">Emergency</a></li>
+      </ul>
+      <a href="sos-center.html" class="sos-btn"><span>🆘</span> SOS</a>
+            <div class="user-badge" id="userBadge" style="display:none;">
+              <span class="user-avatar" id="userAvatar">?</span>
+              <span class="user-name"></span>
+              <button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+            </div>
+            <a href="login.html" class="login-nav-btn" id="loginNavBtn">Login</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="mobile-link">🏠 Dashboard</a>
+      <a href="sos-center.html" class="mobile-link">🆘 SOS Center</a>
+      <a href="cyber-safety.html" class="mobile-link active">🔒 Cyber Safety</a>
+      <a href="evidence-vault.html" class="mobile-link">📁 Evidence Vault</a>
+      <a href="legal-awareness.html" class="mobile-link">⚖️ Legal Awareness</a>
+      <a href="emergency-guide.html" class="mobile-link">🚨 Emergency Guide</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header cyber-header">
+      <div class="container">
+        <p class="page-eyebrow">Recognize. Report. Recover.</p>
+        <h1 class="page-title">Cyber Safety <span class="logo-accent">Hub</span></h1>
+        <p class="page-sub">Know how to identify online threats, protect yourself, and report cyber crimes effectively.</p>
+      </div>
+    </section>
+
+    <section class="threats-section">
+      <div class="container">
+        <div class="threat-tabs">
+          <button class="tab-btn active" data-tab="blackmail">📸 Instagram Blackmail</button>
+          <button class="tab-btn" data-tab="whatsapp">💬 WhatsApp Scam</button>
+          <button class="tab-btn" data-tab="fakeprofile">👤 Fake Profile</button>
+          <button class="tab-btn" data-tab="report">🚨 How to Report</button>
+        </div>
+
+        <div class="tab-content active" id="tab-blackmail">
+          <div class="threat-card">
+            <div class="threat-icon-wrap"><span class="threat-big-icon">📸</span></div>
+            <div class="threat-body">
+              <h2>Instagram Blackmail</h2>
+              <p class="threat-desc">Someone threatening to share your private photos/videos unless you pay or comply with demands.</p>
+              <div class="warning-box">
+                <span>⚠️</span>
+                <p>This is a <strong>criminal offense</strong> under IT Act Section 66E and IPC 354C. You are the victim — not at fault.</p>
+              </div>
+              <h3>Warning Signs</h3>
+              <ul class="threat-list">
+                <li>🔴 Stranger sent follow request, started friendly conversation</li>
+                <li>🔴 Asked for personal photos "just between us"</li>
+                <li>🔴 Now threatening to share photos with family/friends</li>
+                <li>🔴 Demanding money via UPI, crypto, or gift cards</li>
+              </ul>
+              <h3>What To Do — Step by Step</h3>
+              <ol class="steps-list">
+                <li><span class="step-num">1</span><strong>Do NOT pay.</strong> Payment encourages more blackmail.</li>
+                <li><span class="step-num">2</span><strong>Screenshot everything</strong> — threats, messages, profile.</li>
+                <li><span class="step-num">3</span><strong>Block the person</strong> on all platforms.</li>
+                <li><span class="step-num">4</span><strong>Report to Instagram</strong> — Profile → Report → It's inappropriate.</li>
+                <li><span class="step-num">5</span><strong>File cyber complaint</strong> at cybercrime.gov.in or call 1930.</li>
+                <li><span class="step-num">6</span><strong>Tell a trusted adult</strong> — you are not alone.</li>
+              </ol>
+              <div class="action-links">
+                <a href="https://www.cybercrime.gov.in" target="_blank" class="cyber-action-btn primary">🖥️ File Online Complaint</a>
+                <a href="evidence-vault.html" class="cyber-action-btn secondary">📁 Save Evidence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-whatsapp">
+          <div class="threat-card">
+            <div class="threat-icon-wrap"><span class="threat-big-icon">💬</span></div>
+            <div class="threat-body">
+              <h2>WhatsApp Scam</h2>
+              <p class="threat-desc">Fraudsters impersonate friends, family, or officials to steal money or personal data via WhatsApp.</p>
+              <div class="warning-box">
+                <span>⚠️</span>
+                <p>Never share OTPs, bank details, or Aadhaar on WhatsApp — <strong>no real official will ask for these.</strong></p>
+              </div>
+              <h3>Common Scam Types</h3>
+              <ul class="threat-list">
+                <li>🔴 "Mom/Sis, I'm in trouble — send money urgently" (impersonation)</li>
+                <li>🔴 Fake job offer with upfront fee payment</li>
+                <li>🔴 Lottery winner — "Click this link to claim prize"</li>
+                <li>🔴 WhatsApp OTP theft — "Forward this code, it came by mistake"</li>
+                <li>🔴 Video call recording and blackmail</li>
+              </ul>
+              <h3>What To Do</h3>
+              <ol class="steps-list">
+                <li><span class="step-num">1</span><strong>Verify by calling back</strong> on a known number.</li>
+                <li><span class="step-num">2</span><strong>Never click unknown links</strong> received on WhatsApp.</li>
+                <li><span class="step-num">3</span><strong>Screenshot the conversation</strong> and save to Evidence Vault.</li>
+                <li><span class="step-num">4</span><strong>Block and Report</strong> — Chat → More → Report.</li>
+                <li><span class="step-num">5</span><strong>Report fraud</strong> at cybercrime.gov.in or 1930.</li>
+              </ol>
+              <div class="action-links">
+                <a href="https://www.cybercrime.gov.in" target="_blank" class="cyber-action-btn primary">🖥️ File Online Complaint</a>
+                <a href="evidence-vault.html" class="cyber-action-btn secondary">📁 Save Evidence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-fakeprofile">
+          <div class="threat-card">
+            <div class="threat-icon-wrap"><span class="threat-big-icon">👤</span></div>
+            <div class="threat-body">
+              <h2>Fake Profile Reporting</h2>
+              <p class="threat-desc">Someone created a fake account using your name, photos, or identity to harass or defame you.</p>
+              <div class="warning-box">
+                <span>⚠️</span>
+                <p>Under IT Act Section 66C, identity theft is punishable with <strong>up to 3 years imprisonment</strong> and fine.</p>
+              </div>
+              <h3>How to Identify a Fake Profile</h3>
+              <ul class="threat-list">
+                <li>🔴 Account uses your photos without permission</li>
+                <li>🔴 Messaging your friends/family pretending to be you</li>
+                <li>🔴 Posting objectionable content in your name</li>
+                <li>🔴 Recently created account with few followers</li>
+              </ul>
+              <h3>Report by Platform</h3>
+              <div class="platform-grid">
+                <div class="platform-card">
+                  <span class="platform-icon">📸</span>
+                  <strong>Instagram</strong>
+                  <p>Profile → ⋮ → Report → Pretending to be someone</p>
+                </div>
+                <div class="platform-card">
+                  <span class="platform-icon">👥</span>
+                  <strong>Facebook</strong>
+                  <p>Profile → ⋯ → Find Support → Pretending to be me</p>
+                </div>
+                <div class="platform-card">
+                  <span class="platform-icon">🐦</span>
+                  <strong>Twitter/X</strong>
+                  <p>Profile → ⋯ → Report → Impersonation</p>
+                </div>
+                <div class="platform-card">
+                  <span class="platform-icon">💬</span>
+                  <strong>WhatsApp</strong>
+                  <p>Chat → More → Report contact to WhatsApp</p>
+                </div>
+              </div>
+              <div class="action-links">
+                <a href="https://www.cybercrime.gov.in" target="_blank" class="cyber-action-btn primary">🖥️ File Online Complaint</a>
+                <a href="evidence-vault.html" class="cyber-action-btn secondary">📁 Save Evidence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-report">
+          <div class="threat-card">
+            <div class="threat-icon-wrap"><span class="threat-big-icon">🚨</span></div>
+            <div class="threat-body">
+              <h2>How to Report Cyber Crime</h2>
+              <p class="threat-desc">Reporting is free, confidential, and can be done online from home.</p>
+              <h3>3 Ways to Report</h3>
+              <div class="report-methods">
+                <div class="report-method online">
+                  <div class="method-icon">🖥️</div>
+                  <h4>Online Portal</h4>
+                  <p>cybercrime.gov.in — 24/7, from home, anonymous option available.</p>
+                  <a href="https://www.cybercrime.gov.in" target="_blank" class="method-link">Visit Portal →</a>
+                </div>
+                <div class="report-method phone">
+                  <div class="method-icon">📞</div>
+                  <h4>Helpline: 1930</h4>
+                  <p>National Cyber Crime Helpline. 24/7. Free call. Tamil support available.</p>
+                  <a href="tel:1930" class="method-link">Call 1930 →</a>
+                </div>
+                <div class="report-method station">
+                  <div class="method-icon">🚔</div>
+                  <h4>Police Station</h4>
+                  <p>Visit nearest cyber crime cell with screenshots as evidence.</p>
+                  <a href="emergency-guide.html" class="method-link">Get Guidance →</a>
+                </div>
+              </div>
+              <h3>What to Prepare</h3>
+              <ul class="threat-list">
+                <li>✅ Screenshots of messages/threats (date & time visible)</li>
+                <li>✅ Accused person's profile URL / phone number</li>
+                <li>✅ Your Aadhaar / ID proof</li>
+                <li>✅ Bank transaction details if money was involved</li>
+                <li>✅ Written timeline of what happened</li>
+              </ul>
+              <div class="action-links">
+                <a href="https://www.cybercrime.gov.in" target="_blank" class="cyber-action-btn primary">🖥️ File Complaint Now</a>
+                <a href="evidence-vault.html" class="cyber-action-btn secondary">📁 Prepare Evidence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="safety-tips-section" id="learn">
+      <div class="container">
+        <h2 class="section-title">Quick Safety Tips</h2>
+        <div class="tips-grid">
+          <div class="tip-card"><span class="tip-icon">🔐</span><h4>Strong Passwords</h4><p>Use 12+ characters with symbols. Never reuse passwords across accounts.</p></div>
+          <div class="tip-card"><span class="tip-icon">🔒</span><h4>2-Step Verification</h4><p>Enable 2FA on Instagram, WhatsApp, Gmail. Blocks access even if password is stolen.</p></div>
+          <div class="tip-card"><span class="tip-icon">👁️</span><h4>Privacy Settings</h4><p>Set Instagram/Facebook to Private. Only accept requests from known people.</p></div>
+          <div class="tip-card"><span class="tip-icon">🚫</span><h4>Don't Share OTPs</h4><p>No bank or government will ever ask for your OTP. Sharing it gives full account access.</p></div>
+          <div class="tip-card"><span class="tip-icon">📸</span><h4>Photo Safety</h4><p>Never share intimate photos digitally. Once sent, you lose control forever.</p></div>
+          <div class="tip-card"><span class="tip-icon">🔗</span><h4>Suspicious Links</h4><p>Don't click links from unknown numbers or DMs — even if they look official.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="helpline-strip">
+    <div class="container helpline-inner">
+      <span>📞 Women Helpline: <strong>1091</strong></span>
+      <span>🚔 Police: <strong>100</strong></span>
+      <span>💻 Cyber Crime: <strong>1930</strong></span>
+      <span>🆘 Emergency: <strong>112</strong></span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">She<span class="logo-accent">Shield</span></span>
+        <p>Built with care for every woman's safety.</p>
+      </div>
+      <div class="footer-links">
+        <a href="sos-center.html">SOS Center</a>
+        <a href="cyber-safety.html">Cyber Safety</a>
+        <a href="evidence-vault.html">Evidence Vault</a>
+        <a href="legal-awareness.html">Legal</a>
+        <a href="emergency-guide.html">Emergency</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2024 SheShield. Made for safety, built with purpose.</p>
+  </footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="../js/firebase-config.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/cyber.js"></script>
+</body>
+</html>
